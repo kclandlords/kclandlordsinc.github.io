@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Landlords, Inc. Annual Dinner 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:  #1a3d50;
+    --teal:  #2a5a70;
+    --light: #3a7a90;
+    --gold:  #e8c97a;
+    --gold2: #c9a84c;
+    --cream: #e8f4f8;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--navy); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 60px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before { content:''; position:absolute; top:0; left:0; right:0; height:6px; background:var(--gold); }
+  .hero::after  { content:''; position:absolute; bottom:0; left:0; right:0; height:6px; background:var(--gold); }
+  .hero-org { font-size:10px; font-weight:700; letter-spacing:5px; text-transform:uppercase; color:var(--gold); opacity:.8; margin-bottom:16px; }
+  .hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(36px,6vw,64px); font-weight:600; color:#fff; line-height:1.1; margin-bottom:12px; }
+  .hero h1 em { color:var(--gold); font-style:italic; }
+  .hero-sub { font-size:13px; color:rgba(255,255,255,0.6); margin-bottom:24px; line-height:1.7; max-width:600px; margin-left:auto; margin-right:auto; }
+  .hero-date { display:inline-block; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); border:1px solid rgba(232,201,122,0.4); padding:10px 24px; }
+
+  /* ── SECTIONS ── */
+  .section { max-width: 860px; margin: 0 auto; padding: 48px 24px; }
+  .section-label { font-size:10px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:var(--gold2); margin-bottom:24px; }
+
+  /* ── THANK YOU ── */
+  .thankyou { background:#fff; padding:48px 24px; text-align:center; }
+  .thankyou-inner { max-width:700px; margin:0 auto; }
+  .thankyou h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,44px); font-weight:600; color:var(--navy); line-height:1.2; margin-bottom:16px; }
+  .thankyou h2 em { color:var(--gold2); font-style:italic; }
+  .thankyou p { font-size:15px; color:rgba(26,61,80,0.7); line-height:1.8; margin-bottom:12px; }
+
+  /* ── SPEAKERS ── */
+  .speakers { background:var(--cream); padding:48px 24px; }
+  .speakers-inner { max-width:860px; margin:0 auto; }
+  .speaker-grid { display:flex; gap:24px; flex-wrap:wrap; justify-content:center; margin-top:8px; }
+  .speaker-card {
+    flex:1; min-width:280px; max-width:400px;
+    background:#fff;
+    border:1px solid rgba(26,61,80,0.12);
+    padding:28px 24px;
+    position:relative;
+    text-align:center;
+  }
+  .speaker-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); }
+  .speaker-photo { width:90px; height:90px; border-radius:50%; object-fit:cover; object-position:center top; border:3px solid var(--gold); display:block; margin:0 auto 16px; }
+  .speaker-role { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold2); margin-bottom:8px; }
+  .speaker-name { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:700; color:var(--navy); margin-bottom:6px; }
+  .speaker-title { font-size:11px; color:var(--light); line-height:1.5; margin-bottom:14px; }
+  .speaker-link {
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+    color:var(--navy); border:1px solid var(--gold2); padding:8px 20px; text-decoration:none;
+    transition:all 0.2s;
+  }
+  .speaker-link:hover { background:var(--gold2); color:#fff; }
+  .speaker-link.placeholder { color:rgba(26,61,80,0.3); border-color:rgba(26,61,80,0.15); cursor:default; }
+
+  /* ── SPONSORS ── */
+  .sponsors { background:#fff; padding:48px 24px; }
+  .sponsors-inner { max-width:860px; margin:0 auto; text-align:center; }
+  .sponsor-grid { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-top:8px; }
+  .sponsor-card {
+    flex:1; min-width:180px; max-width:220px;
+    border:1px solid rgba(26,61,80,0.12);
+    padding:24px 16px;
+    text-align:center;
+    position:relative;
+    text-decoration:none;
+    color:var(--navy);
+    display:block;
+    transition:all 0.2s;
+  }
+  .sponsor-card:hover { border-color:var(--gold2); transform:translateY(-2px); }
+  .sponsor-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); }
+  .sponsor-logo { height:40px; width:auto; display:block; margin:0 auto 12px; }
+  .sponsor-name { font-size:12px; font-weight:600; color:var(--navy); margin-bottom:4px; }
+  .sponsor-desc { font-size:11px; color:rgba(26,61,80,0.55); line-height:1.5; }
+  .sponsor-visit { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold2); margin-top:10px; display:block; }
+
+  /* ── NEXT STEPS ── */
+  .nextsteps { background:var(--navy); padding:48px 24px; text-align:center; position:relative; overflow:hidden; }
+  .nextsteps::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--gold); }
+  .nextsteps-inner { max-width:700px; margin:0 auto; }
+  .nextsteps h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,42px); font-weight:600; color:#fff; margin-bottom:16px; }
+  .nextsteps h2 em { color:var(--gold); font-style:italic; }
+  .nextsteps p { font-size:14px; color:rgba(255,255,255,0.65); line-height:1.8; margin-bottom:28px; }
+  .nextsteps-btn {
+    display:inline-block; background:var(--gold); color:var(--navy);
+    font-size:12px; font-weight:700; letter-spacing:3px; text-transform:uppercase;
+    padding:16px 48px; text-decoration:none; margin:8px;
+  }
+  .nextsteps-btn.secondary { background:transparent; color:var(--gold); border:1px solid rgba(232,201,122,0.5); }
+
+  /* ── FOOTER ── */
+  .footer { background:var(--navy); border-top:1px solid rgba(232,201,122,0.2); padding:24px; text-align:center; }
+  .footer::before { content:''; display:block; height:3px; background:var(--gold); margin-bottom:20px; }
+  .footer p { font-size:11px; color:rgba(255,255,255,0.4); line-height:1.8; }
+  .footer a { color:var(--gold); text-decoration:none; }
+
+  @media (max-width:560px) {
+    .speaker-grid, .sponsor-grid { flex-direction:column; align-items:center; }
+    .speaker-card, .sponsor-card { max-width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-org">Landlords, Inc.</p>
+  <h1>Thank You for<br><em>Being There.</em></h1>
+  <p class="hero-sub">We are grateful for your presence at our Annual Dinner. The conversations, connections, and ideas that happened tonight are exactly what Landlords, Inc. is built for.</p>
+  <div class="hero-date">March 31, 2026 &nbsp;·&nbsp; The Loretto &nbsp;·&nbsp; Kansas City, MO</div>
+</section>
+
+<!-- THANK YOU -->
+<section class="thankyou">
+  <div class="thankyou-inner">
+    <p class="section-label" style="text-align:center;">A Note From Landlords, Inc.</p>
+    <h2>Where the Next<br><em>Opportunity is Built.</em></h2>
+    <p>Tonight was about more than a dinner. It was about positioning ourselves — as landlords, as investors, as a community — to take advantage of what is happening right now in Kansas City.</p>
+    <p>The conversations you had tonight matter. The relationships you started matter. We hope you leave with new ideas, new connections, and a clearer picture of where the opportunities are.</p>
+    <p>Use the links below to connect with our speakers and sponsors — and stay connected with Landlords, Inc. as we continue building on tonight's momentum.</p>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section class="speakers">
+  <div class="speakers-inner">
+    <p class="section-label" style="text-align:center;">Tonight's Featured Speakers</p>
+    <div class="speaker-grid">
+
+      <div class="speaker-card">
+        <img class="speaker-photo" src="https://mcusercontent.com/73630736251025713a84e01c2/images/5685fe10-4b39-7caa-023a-0b1d739d1357.jpg" alt="Mayor Christal Watson">
+        <div class="speaker-role">Special Guest &amp; Keynote</div>
+        <div class="speaker-name">Mayor Christal Watson</div>
+        <div class="speaker-title">Mayor/CEO, Unified Government of Wyandotte County &amp; Kansas City, Kansas</div>
+        <a href="https://www.wycokck.org/Departments/Mayors-Office" target="_blank" class="speaker-link">Mayor's Office</a>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-photo" src="https://mcusercontent.com/73630736251025713a84e01c2/images/9aebbfc2-dcc3-61e7-48ba-35e76e243442.jpg" alt="Marquita Miller-Joshua">
+        <div class="speaker-role">Featured Speaker</div>
+        <div class="speaker-name">Marquita Miller-Joshua</div>
+        <div class="speaker-title">President-Designate, Holy Rosary Credit Union</div>
+        <a href="https://holyrosarycu.org/" target="_blank" class="speaker-link">Holy Rosary Credit Union</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="sponsors">
+  <div class="sponsors-inner">
+    <p class="section-label">Our Sponsors &amp; Partners</p>
+    <p style="font-size:14px; color:rgba(26,61,80,0.65); line-height:1.7; margin-bottom:28px; max-width:600px; margin-left:auto; margin-right:auto;">These organizations made tonight possible. We encourage you to connect with them — they are invested in your success as a Kansas City landlord and investor.</p>
+    <div class="sponsor-grid">
+
+      <a href="https://www.kclend.com" target="_blank" class="sponsor-card">
+        <img src="https://mcusercontent.com/73630736251025713a84e01c2/_thumbs/ea28dcf7-44f0-d873-c93b-cd8c5bc8a9fb.png" alt="Crossroads Investment Lending" class="sponsor-logo" style="background:#fff; padding:4px 8px; border:1px solid rgba(26,61,80,0.1);">
+        <div class="sponsor-name">Crossroads Investment Lending</div>
+        <div class="sponsor-desc">Fast, trusted hard money loans — fix &amp; flip, bridge, cash-out, and DSCR.</div>
+        <span class="sponsor-visit">kclend.com →</span>
+      </a>
+
+      <a href="https://www.callonken.com/" target="_blank" class="sponsor-card">
+        <img src="https://mcusercontent.com/73630736251025713a84e01c2/images/b94ac8c9-d78f-5330-8f68-178a41504dfe.png" alt="Ken's Home Services" class="sponsor-logo">
+        <div class="sponsor-name">Ken's Home Services</div>
+        <div class="sponsor-desc">Plumbing, heating, and cooling services for Kansas City property owners.</div>
+        <span class="sponsor-visit">callonken.com →</span>
+      </a>
+
+      <a href="https://www.prorisk-services.com" target="_blank" class="sponsor-card">
+        <div style="height:40px; display:flex; align-items:center; justify-content:center; margin-bottom:12px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:700; color:var(--navy);">Ron Brown</span>
+        </div>
+        <div class="sponsor-name">Pro Risk-Services Insurance</div>
+        <div class="sponsor-desc">Insurance solutions for landlords and real estate investors.</div>
+        <span class="sponsor-visit">prorisk-services.com →</span>
+      </a>
+
+      <a href="https://lorettoevents.com/" target="_blank" class="sponsor-card">
+        <img src="https://mcusercontent.com/73630736251025713a84e01c2/images/77a1a117-f4d6-a0ee-0e42-da5061b090ee.jpg" alt="Loretto Event Center" class="sponsor-logo" style="background:#fff; padding:4px 8px; border:1px solid rgba(26,61,80,0.1);">
+        <div class="sponsor-name">The Loretto Event Center</div>
+        <div class="sponsor-desc">Weddings, corporate events, and social gatherings in Kansas City.</div>
+        <span class="sponsor-visit">lorettoevents.com →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="nextsteps">
+  <div class="nextsteps-inner">
+    <p class="section-label" style="color:var(--gold); text-align:center;">Stay Connected</p>
+    <h2>Keep the<br><em>Momentum Going.</em></h2>
+    <p>Tonight was the beginning of the conversation, not the end. Stay connected with Landlords, Inc. for resources, events, and the community that helps you grow.</p>
+    <a href="https://kclandlords.com" target="_blank" class="nextsteps-btn">Visit kclandlords.com</a>
+    <a href="/cdn-cgi/l/email-protection#6509040b01090a170116250e0609040b01090a1701164b060a08" class="nextsteps-btn secondary">Get in Touch</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>
+    Landlords, Inc. &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#167a7778727a79647265567d757a7778727a796472653875797b"><span class="__cf_email__" data-cfemail="fc909d929890938e988fbc979f909d929890938e988fd29f9391">[email&#160;protected]</span></a><br>
+    <a href="https://kclandlords.github.io/dinner">kclandlords.gi
