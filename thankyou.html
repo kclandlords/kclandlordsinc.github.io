@@ -87,7 +87,7 @@
   }
   .sponsor-card:hover { border-color:var(--gold2); transform:translateY(-2px); }
   .sponsor-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--gold); }
-  .sponsor-logo { height:40px; width:auto; display:block; margin:0 auto 12px; }
+  .sponsor-logo { height:40px; width:auto; display:block; margin:0 auto 12px; object-fit:contain; }
   .sponsor-name { font-size:12px; font-weight:600; color:var(--navy); margin-bottom:4px; }
   .sponsor-desc { font-size:11px; color:rgba(26,61,80,0.55); line-height:1.5; }
   .sponsor-visit { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold2); margin-top:10px; display:block; }
@@ -173,7 +173,7 @@
     <div class="sponsor-grid">
 
       <a href="https://www.kclend.com" target="_blank" class="sponsor-card">
-        <img src="https://mcusercontent.com/73630736251025713a84e01c2/_thumbs/ea28dcf7-44f0-d873-c93b-cd8c5bc8a9fb.png" alt="Crossroads Investment Lending" class="sponsor-logo" style="background:#fff; padding:4px 8px; border:1px solid rgba(26,61,80,0.1);">
+        <img src="https://mcusercontent.com/73630736251025713a84e01c2/_thumbs/ea28dcf7-44f0-d873-c93b-cd8c5bc8a9fb.png" alt="Crossroads Investment Lending" class="sponsor-logo" style="background:#fff; padding:4px 8px; border:1px solid rgba(26,61,80,0.1); display:block; margin:0 auto 12px;">
         <div class="sponsor-name">Crossroads Investment Lending</div>
         <div class="sponsor-desc">Fast, trusted hard money loans — fix &amp; flip, bridge, cash-out, and DSCR.</div>
         <span class="sponsor-visit">kclend.com →</span>
@@ -187,10 +187,8 @@
       </a>
 
       <a href="https://www.prorisk-services.com" target="_blank" class="sponsor-card">
-        <div style="height:40px; display:flex; align-items:center; justify-content:center; margin-bottom:12px;">
-          <span style="font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:700; color:var(--navy);">Ron Brown</span>
-        </div>
-        <div class="sponsor-name">Pro Risk-Services Insurance</div>
+        <img src="https://kclandlords.github.io/pro_risk.jpg" alt="Pro Risk-Services" class="sponsor-logo">
+        <div class="sponsor-name">Ron Brown · Pro Risk-Services Insurance</div>
         <div class="sponsor-desc">Insurance solutions for landlords and real estate investors.</div>
         <span class="sponsor-visit">prorisk-services.com →</span>
       </a>
